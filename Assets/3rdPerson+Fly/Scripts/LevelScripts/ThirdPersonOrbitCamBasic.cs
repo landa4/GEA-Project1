@@ -37,7 +37,11 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 
 		// Set camera default position.
 		cam.position = player.position + Quaternion.identity * pivotOffset + Quaternion.identity * camOffset;
+<<<<<<< HEAD
 		//cam.rotation = Quaternion.identity;
+=======
+		cam.rotation = Quaternion.identity;
+>>>>>>> 2bf6d93010ce19e68bc097b4deb855997dd0eb1e
 
 		// Get camera position relative to the player, used for collision test.
 		relCameraPos = transform.position - player.position;
