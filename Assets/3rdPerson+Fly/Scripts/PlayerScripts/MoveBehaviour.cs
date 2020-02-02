@@ -3,6 +3,7 @@
 // MoveBehaviour inherits from GenericBehaviour. This class corresponds to basic walk and run behaviour, it is the default behaviour.
 public class MoveBehaviour : GenericBehaviour
 {
+	public bool canMove = true;
 	public float walkSpeed = 0.15f;                 // Default walk speed.
 	public float runSpeed = 1.0f;                   // Default run speed.
 	public float sprintSpeed = 2.0f;                // Default sprint speed.
@@ -34,21 +35,27 @@ public class MoveBehaviour : GenericBehaviour
 	// Update is used to set features regardless the active behaviour.
 	void Update()
 	{
-		// Get jump input.
-		if (!jump && Input.GetButtonDown(jumpButton) && behaviourManager.IsCurrentBehaviour(this.behaviourCode) && !behaviourManager.IsOverriding())
-		{
-			jump = true;
-		}
+	
+			// Get jump input.
+			if (!jump && Input.GetButtonDown(jumpButton) && behaviourManager.IsCurrentBehaviour(this.behaviourCode) && !behaviourManager.IsOverriding())
+			{
+				jump = true;
+			}
+		
+
 	}
 
 	// LocalFixedUpdate overrides the virtual function of the base class.
 	public override void LocalFixedUpdate()
 	{
-		// Call the basic movement manager.
-		MovementManagement(behaviourManager.GetH, behaviourManager.GetV);
 
-		// Call the jump manager.
-		JumpManagement();
+			// Call the basic movement manager.
+			MovementManagement(behaviourManager.GetH, behaviourManager.GetV);
+
+			// Call the jump manager.
+			JumpManagement();
+		
+	
 	}
 
 	// Execute the idle and walk/run jump movements.
@@ -185,5 +192,17 @@ public class MoveBehaviour : GenericBehaviour
 	private void OnCollisionExit(Collision collision)
 	{
 		isColliding = false;
+	}
+
+	public void SetCanMove(bool b)
+	{
+		if (!b)
+		{
+			walkSpeed =0;
+			runSpeed = 0;                 
+			sprintSpeed = 0;
+			canMove = b;
+		}
+			
 	}
 }

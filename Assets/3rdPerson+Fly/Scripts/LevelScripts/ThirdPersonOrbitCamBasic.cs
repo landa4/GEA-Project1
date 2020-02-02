@@ -5,7 +5,7 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 {
 	public Transform player;                                           // Player's reference.
 	public Vector3 pivotOffset = new Vector3(0.0f, 1.0f,  0.0f);       // Offset to repoint the camera.
-	public Vector3 camOffset   = new Vector3(0.4f, 0.5f, -2.0f);       // Offset to relocate the camera related to the player position.
+	private Vector3 camOffset;     // Offset to relocate the camera related to the player position.
 	public float smooth = 10f;                                         // Speed of camera responsiveness.
 	public float horizontalAimingSpeed = 6f;                           // Horizontal turn speed.
 	public float verticalAimingSpeed = 6f;                             // Vertical turn speed.
@@ -27,21 +27,25 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 	private float targetFOV;                                           // Target camera Field of View.
 	private float targetMaxVerticalAngle;                              // Custom camera max vertical clamp angle.
 
+
+
 	// Get the camera horizontal angle.
 	public float GetH { get { return angleH; } }
 
 	void Awake()
 	{
+		//To Disable the mouse pointer
+		//Cursor.visible = false; 
+		//Cursor.lockState = CursorLockMode.Locked;
+		camOffset = transform.localPosition;
+
 		// Reference to the camera transform.
 		cam = transform;
 
 		// Set camera default position.
 		cam.position = player.position + Quaternion.identity * pivotOffset + Quaternion.identity * camOffset;
-<<<<<<< HEAD
-		//cam.rotation = Quaternion.identity;
-=======
-		cam.rotation = Quaternion.identity;
->>>>>>> 2bf6d93010ce19e68bc097b4deb855997dd0eb1e
+		cam.rotation = Quaternion.Euler(transform.rotation.eulerAngles);
+
 
 		// Get camera position relative to the player, used for collision test.
 		relCameraPos = transform.position - player.position;
@@ -72,6 +76,7 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 		angleV = Mathf.Clamp(angleV, minVerticalAngle, targetMaxVerticalAngle);
 
 		// Set camera orientation.
+
 		Quaternion camYRotation = Quaternion.Euler(0, angleH, 0);
 		Quaternion aimRotation = Quaternion.Euler(-angleV, angleH, 0);
 		cam.rotation = aimRotation;

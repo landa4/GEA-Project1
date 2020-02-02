@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/level1_leander.unity
-=======
-- path: Assets/Scenes/test.unity
->>>>>>> 2bf6d93010ce19e68bc097b4deb855997dd0eb1e
   isLoaded: 1
   isActive: 1
   isSubScene: 0
