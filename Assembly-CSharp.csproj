@@ -45,14 +45,60 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ControlsTutorial.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\HintManagement.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ThirdPersonOrbitCamBasic.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\AimBehaviourBasic.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\BasicBehaviour.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\FlyBehaviour.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\MoveBehaviour.cs" />
-     <Compile Include="Assets\AllSkyFree\AllSkyFree_Menu.cs" />
+     <Compile Include="Assets\Imports\3rdPerson+Fly\Scripts\LevelScripts\ControlsTutorial.cs" />
+     <Compile Include="Assets\Imports\3rdPerson+Fly\Scripts\LevelScripts\HintManagement.cs" />
+     <Compile Include="Assets\Imports\3rdPerson+Fly\Scripts\LevelScripts\ThirdPersonOrbitCamBasic.cs" />
+     <Compile Include="Assets\Imports\3rdPerson+Fly\Scripts\PlayerScripts\AimBehaviourBasic.cs" />
+     <Compile Include="Assets\Imports\3rdPerson+Fly\Scripts\PlayerScripts\BasicBehaviour.cs" />
+     <Compile Include="Assets\Imports\3rdPerson+Fly\Scripts\PlayerScripts\FlyBehaviour.cs" />
+     <Compile Include="Assets\Imports\3rdPerson+Fly\Scripts\PlayerScripts\MoveBehaviour.cs" />
+     <Compile Include="Assets\Imports\AllSkyFree\AllSkyFree_Menu.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Cameras\Scripts\AutoCam.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Cameras\Scripts\HandHeldCam.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Cameras\Scripts\LookatTarget.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Cameras\Scripts\PivotBasedCameraRig.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Cameras\Scripts\ProtectCameraFromWallClip.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Cameras\Scripts\TargetFieldOfView.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\ActivateTrigger.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\AlphaButtonClickMask.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\AutoMobileShaderSwitch.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\AutoMoveAndRotate.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\CameraRefocus.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\CurveControlledBob.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\DragRigidbody.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\DynamicShadowSettings.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\EventSystemChecker.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\FollowTarget.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\ForcedReset.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\FOVKick.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\FPSCounter.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\LerpControlledBob.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\ObjectResetter.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\ParticleSystemDestroyer.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\PlatformSpecificContent.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\SimpleActivatorMenu.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\SimpleMouseRotator.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\SmoothFollow.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\TimedObjectActivator.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\TimedObjectDestructor.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\WaypointCircuit.cs" />
+     <Compile Include="Assets\Imports\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\Scripts\AiAgressiv.cs" />
      <Compile Include="Assets\Scripts\AiPatrol.cs" />
      <Compile Include="Assets\Scripts\FinishedLevel.cs" />
@@ -60,7 +106,10 @@
      <Compile Include="Assets\Scripts\Minimap.cs" />
      <Compile Include="Assets\Scripts\MovementInput.cs" />
      <Compile Include="Assets\Scripts\MovingObstacle.cs" />
-     <None Include="Assets\AllSkyFree\AllSkyFree_Readme.txt" />
+     <None Include="Assets\Imports\AllSkyFree\AllSkyFree_Readme.txt" />
+     <None Include="Assets\Imports\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Imports\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+     <None Include="Assets\Imports\Standard Assets\Cameras\CameraGuidelines.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/GameEngine/proj1/GEA-Project1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -270,6 +319,9 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.19f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Assembly-CSharp-firstpass">
+ <HintPath>C:/GameEngine/proj1/GEA-Project1/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.19f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -616,12 +668,6 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.19f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{83F7B029-85A2-F29A-9F05-CF33A0D21261}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
