@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\AiAgressiv.cs" />
      <Compile Include="Assets\Scripts\AiPatrol.cs" />
      <Compile Include="Assets\Scripts\FinishedLevel.cs" />
+     <Compile Include="Assets\Scripts\lantern.cs" />
      <Compile Include="Assets\Scripts\Minimap.cs" />
      <Compile Include="Assets\Scripts\MovementInput.cs" />
      <Compile Include="Assets\Scripts\MovingObstacle.cs" />
