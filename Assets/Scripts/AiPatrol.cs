@@ -5,8 +5,13 @@ using UnityEngine;
 public class AiPatrol : MonoBehaviour
 {
 
-    public float lookRadius = 10;
+    public float lookRadius = 10f;
     public float rotationSpeed = 5f;
+
+    public float attackDamage = 1f;
+    public float attacksPerSecond = 0.5f;
+    private float lastAttack = 0;
+    public float attackRange = 1.5f;
 
     private UnityEngine.AI.NavMeshAgent agent;
     private Animator animator;
@@ -15,6 +20,8 @@ public class AiPatrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        attacksPerSecond = 1f / attacksPerSecond;
+        lastAttack = attacksPerSecond;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
@@ -23,16 +30,31 @@ public class AiPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lastAttack += Time.deltaTime;
         float distance = Vector3.Distance(target.transform.position, transform.position);
 
         if(distance <= lookRadius)
         {
-            agent.SetDestination(target.transform.position);
-            animator.SetFloat("Speed", 0.2f);
+            
 
             if(distance <= agent.stoppingDistance)
             {
                 FaceTarget();
+            }
+            else
+            {
+                agent.SetDestination(target.transform.position);
+                animator.SetFloat("Speed", 0.2f);
+            }
+        }
+        //Debug.Log(lastAttack);
+        if (lastAttack >= attacksPerSecond){
+
+            lastAttack = attacksPerSecond;
+            if (distance <= attackRange){
+
+                target.GetComponent<PlayerHealth>().Damage(attackDamage);
+                lastAttack = 0;
             }
         }
 
@@ -58,7 +80,10 @@ public class AiPatrol : MonoBehaviour
     void OnDrawGizmos()
     {
         // Display the explosion radius when selected
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
