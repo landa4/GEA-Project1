@@ -54,6 +54,7 @@ public class AiPatrol : MonoBehaviour
             if (distance <= attackRange){
 
                 target.GetComponent<PlayerHealth>().Damage(attackDamage);
+                animator.SetTrigger("attack");
                 lastAttack = 0;
             }
         }

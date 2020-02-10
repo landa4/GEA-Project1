@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float life = 10;
-    public float maxLife = 10;
+    public float life = 4;
+    public float maxLife = 4;
 
     public float damageAnimationTime = 1;
     private float lastDamage = 0;
@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (damaged)
+        if (damaged && life > 0)
         {
             damageTexture.SetActive(true);
             lastDamage += Time.deltaTime;
