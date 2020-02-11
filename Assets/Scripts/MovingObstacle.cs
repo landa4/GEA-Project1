@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovingObstacle : MonoBehaviour
 {
+    public AudioSource grindSound;
 
     public Vector3 position1;
     public Vector3 position2;
@@ -17,7 +18,7 @@ public class MovingObstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        grindSound.Play();
     }
 
     // Update is called once per frame
