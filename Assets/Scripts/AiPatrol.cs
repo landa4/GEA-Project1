@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AiPatrol : MonoBehaviour
 {
+    public Zombie_voices voices;
 
     public float lookRadius = 10f;
     public float rotationSpeed = 5f;
@@ -35,7 +36,7 @@ public class AiPatrol : MonoBehaviour
 
         if(distance <= lookRadius)
         {
-            
+            voices.aggressive = true;   
 
             if(distance <= agent.stoppingDistance)
             {
@@ -46,6 +47,8 @@ public class AiPatrol : MonoBehaviour
                 agent.SetDestination(target.transform.position);
                 animator.SetFloat("Speed", 0.2f);
             }
+        } else {
+            voices.aggressive = false;
         }
         //Debug.Log(lastAttack);
         if (lastAttack >= attacksPerSecond){
