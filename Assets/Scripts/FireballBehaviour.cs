@@ -15,10 +15,11 @@ public class FireballBehaviour : MonoBehaviour
     void Start()
     {
         int i = 0;
+        float angle = Random.Range(0, Mathf.PI * 2);
         foreach(GameObject b in balls) {
-            float angle = Random.Range(0, 360);
+            angle += Mathf.PI * 2 / balls.Length;
             b.transform.localPosition = new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle));
-            waveAngle[i] = Mathf.Sin(Random.Range(0, 180));
+            waveAngle[i] = Mathf.Sin(Random.Range(0, Mathf.PI * 2));
             i++;
         } 
     }

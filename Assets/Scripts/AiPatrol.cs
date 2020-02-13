@@ -52,13 +52,13 @@ public class AiPatrol : MonoBehaviour
         }
         //Debug.Log(lastAttack);
         if (lastAttack >= attacksPerSecond){
-
-            lastAttack = attacksPerSecond;
+            Debug.Log("wtf");
             if (distance <= attackRange){
 
                 target.GetComponent<PlayerHealth>().Damage(attackDamage);
                 animator.SetTrigger("attack");
-                lastAttack = 0;
+                lastAttack = 0f;
+                
             }
         }
 
