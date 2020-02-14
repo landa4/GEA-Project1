@@ -52,7 +52,6 @@ public class AiPatrol : MonoBehaviour
         }
         //Debug.Log(lastAttack);
         if (lastAttack >= attacksPerSecond){
-            Debug.Log("wtf");
             if (distance <= attackRange){
 
                 target.GetComponent<PlayerHealth>().Damage(attackDamage);
